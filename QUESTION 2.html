@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My page</title>
+</head>
+<body>
+
+<!-- Home Page -->
+<div id="home" style="display: block;">
+    <h1>Home</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <a href="#list" onclick="showPage('list')">Go to List</a>
+</div>
+
+<!-- List Page -->
+<div id="list" style="display: none;">
+    <h1>List</h1>
+    <ul>
+        <li>Java</li>
+        <li>Html</li>
+        <li>C++</li>
+        <li>Multimedia</li>
+        <li>Information system</li>
+        <li>Software engeneering</li>
+        <li>Database</li>
+        <li>Web technology</li>
+        <li>Web design</li>
+        <li>Networking</li>
+    </ul>
+    <a href="#form" onclick="showPage('form')">Go to Form</a>
+</div>
+
+<!-- Form Page -->
+<div id="form" style="display: none;">
+    <h1>Form</h1>
+    <form>
+        <label for="studentName">Name:</label>
+        <input type="text" id="studentName" name="studentName"><br><br>
+        <label for="studentAge">Age:</label>
+        <input type="number" id="studentAge" name="studentAge"><br><br>
+        <label for="studentGrade">Grade:</label>
+        <input type="text" id="studentGrade" name="studentGrade"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <a href="#table" onclick="showPage('table')">Go to Table</a>
+</div>
+
+<!-- Table Page -->
+<div id="table" style="display: none;">
+    <h1>Table</h1>
+    <table border="1">
+        <tr>
+            <th>mame</th>
+            <th>Age</th>
+            <th>Grade</th>
+        </tr>
+        <tr>
+            <td>Louise</td>
+            <td>20</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>Hirwa</td>
+            <td>22</td>
+            <td>B</td>
+        </tr>
+        <tr>
+            <td>Annick</td>
+            <td>24</td>
+            <td>A</td>
+    </table>
+    <a href="#radio" onclick="showPage('radio')">Go to Radio Button</a>
+</div>
+
+<!-- Radio Button Page -->
+<div id="radio" style="display: none;">
+    <h1>Radio Button</h1>
+    <form>
+        <input type="radio" id="female1" name="gender" value="female">
+        <label for="female1">Female</label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="female2">male</label><br>
+        <input type="radio" id="others" name="gender" value="others">
+        <label for="male">others</label><br>
+        <!-- Add more radio buttons as needed -->
+        <a href="#home" onclick="showPage('home')">Go to Home</a>
+    </form>
+</div>
+</div>
+
+<script>
+    // Function to switch between pages
+    function showPage(pageId) {
+        // Hide all pages
+        var pages = document.querySelectorAll('div[id=""]');
+        for (var i = 0; i < pages.length; i++) {
+            pages[i].style.display = 'none';
+        }
+        // Show the selected page
+        document.getElementById(pageId).style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
